@@ -1,0 +1,237 @@
+// I've been implementing and developing software and hardware for various IT company and also consult java.
+ //Example of Coding
+public class CreateArray {
+    public static void main(String[] args) {     
+
+        int[] number = new int[4];
+        // assign value to array
+        number[0] = 10;
+        number[1] = 25;
+        number[2] = -8;
+        number[3] = -10;
+
+        // Get array size
+        System.out.println("Array size is " + number.length);
+        // Read values
+        System.out.println("number[0] = " + number[0]);
+        System.out.println("number[1] = " + number[1]);
+        System.out.println("number[2] + number[3] = " + (number[2] + number[3]));
+
+        String[] names = new String[] { "Mateo", "Danny", "Janifer"};
+
+        // Using for loop reading from array
+        for (int i = 0; i < names.length; i++) {
+            System.out.println("names[" + i + "] = " + names[i]);
+        }
+        final int ROW = 3, COLUMN = 4;
+        int score[][] = new int[ROW][COLUMN];
+        int data = 5;
+
+        // Assigning values
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COLUMN; j++) {
+                score[i][j] = data;
+                data += 5;
+            }
+        }
+
+        // Printing array
+        System.out.println("Array");
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COLUMN; j++) {
+                System.out.print("\t" + score[i][j]);
+            }
+            System.out.println();
+        }
+
+        // Printing array's transpose
+        System.out.println("Transpose array");
+        for (int i = 0; i < COLUMN; i++) {
+            for (int j = 0; j < ROW; j++) {
+                System.out.print("\t" + score[j][i]);
+            }
+            System.out.println();
+        }
+
+        // Find a summation and an average
+        int sum = 0;
+        for (int i = 0; i < COLUMN; i++) {
+            for (int j = 0; j < ROW; j++) {
+                sum += score[j][i];
+            }
+        }
+        System.out.println("Array's sum = " + sum);
+        System.out.println("Array's avg = " + (float)(sum) / (ROW * COLUMN));
+    }
+}
+
+
+//Program 2
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+        System.out.print("Insert Name : ");
+        String s = Sc.nextLine();
+        System.out.print("Insert SurName : ");
+        String s1 = Sc.nextLine();
+        System.out.println("Yourname " + s );
+        System.out.println("Surname " + s1 );
+        System.out.print("Your Full name : ");
+        System.out.println(s + " " + s1);
+
+       System.out.print("Insert Number1 : ");
+        int First = Sc.nextInt();
+        System.out.print("Insert Number2 : ");
+        int Second = Sc.nextInt();
+        System.out.println("Sum : " + (First + Second) );
+        System.out.println("Mean : " + (First + Second)/2 );
+//
+        int a = First;
+        int b = Second;
+
+        System.out.println(a + " equal to " + b  + " -> " + (a == b));
+        System.out.println(a + " not equal to " + b  + " -> " + (a != b));
+        System.out.println(a + " less than " + b  + " -> " + (a < b));
+        System.out.println(a + " more than " + b  + " -> " + (a > b));
+        System.out.println(a + " less than or equal " + b  + " -> " + (a <= b));
+        System.out.println(a + " more than or equal " + b  + " -> " + (a >= b));
+//
+
+	int score = a;
+                 int level = b;
+
+        if (score >= 10 && level >= 5) {
+            System.out.println("You get a gold badge.");
+        }
+
+        if (score <= 5 || level <= 5) {
+            System.out.println("You get a bronze badge.");
+        }
+
+    }
+}
+
+//program 3
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner Sc = new Scanner(System.in);
+        System.out.print("Insert Name : ");
+        String s = Sc.nextLine();
+        System.out.print("Insert SurName : ");
+        String s1 = Sc.nextLine();
+        System.out.println("Yourname " + s );
+        System.out.println("Surname " + s1 );
+        System.out.print("Your Full name : ");
+        System.out.println(s + " " + s1);
+
+       System.out.print("Insert Number1 : ");
+        int First = Sc.nextInt();
+        System.out.print("Insert Number2 : ");
+        int Second = Sc.nextInt();
+        System.out.println("Sum : " + (First + Second) );
+        System.out.println("Mean : " + (First + Second)/2 );
+//
+        int a = First;
+        int b = Second;
+
+        System.out.println(a + " equal to " + b  + " -> " + (a == b));
+        System.out.println(a + " not equal to " + b  + " -> " + (a != b));
+        System.out.println(a + " less than " + b  + " -> " + (a < b));
+        System.out.println(a + " more than " + b  + " -> " + (a > b));
+        System.out.println(a + " less than or equal " + b  + " -> " + (a <= b));
+        System.out.println(a + " more than or equal " + b  + " -> " + (a >= b));
+//
+
+	int score = a;
+                 int level = b;
+
+        if (score >= 10 && level >= 5) {
+            System.out.println("You get a gold badge.");
+        }
+
+        if (score <= 5 || level <= 5) {
+            System.out.println("You get a bronze badge.");
+        }
+
+    }
+}
+// program4 inheritance class
+import java.util.Scanner;
+public class Inheritance {
+    public static void main (String[] args) {
+Scanner Sc = new Scanner(System.in);
+        System.out.print("Insert Name : ");
+        String s = Sc.nextLine();
+        System.out.print("Insert Music Type : ");
+        String s1 = Sc.nextLine();
+        System.out.println("Your name is  " + s + ", Welcome back.");
+        System.out.print("Insert Age : ");
+        int First = Sc.nextInt();     
+        Artist art = new Artist(s, First);
+        Artist art1 = new Artist("Rico", 18);
+        Athlete ath = new Athlete("Danny", 25);
+        Athlete ath1 = new Athlete("Roy", 22);
+        art.genre = s1;
+        ath.sport = "Football";
+        ath1.sport = "Valley ball";
+
+        art.introduce();
+        art.playMusic();
+        art1.introduce();
+        art1.playMusic();
+
+        System.out.println();
+
+        ath.introduce();
+        ath.playSport();
+        ath1.introduce();
+        ath1.playSport();
+        System.out.println();
+    }
+}
+
+class Person {
+    String name;
+    int age;
+
+    public Person () {
+    }
+
+    public Person (String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void introduce () {
+        System.out.println("My name is " + name);
+    }
+}
+
+class Artist extends Person {
+    String genre;
+
+    public Artist (String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public void playMusic () {
+        System.out.println(name + " is playing " + genre + " music.");
+    }
+}
+
+class Athlete extends Person {
+    String sport;
+
+    public Athlete (String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public void playSport () {
+        System.out.println(name + " is playing " + sport + ".");
+    }
+}
